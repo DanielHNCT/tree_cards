@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+    font-family: 'Comic Sans MS';
+    color: hotpink;
+}
+#qlqpoint{
+    text-align: center;
+    font-family: 'Comic Sans MS';
+    color: hotpink;
+}
+#adaLovelace {
+    display: block; /* Cambia el tipo de visualización a bloque para que el margin funcione */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    width: 300px; /* Ajusta el ancho según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 50%; /* Hace que la imagen tenga bordes redondeados, dándole un estilo ovalado */
+    border: 5px solid hotpink; /* Establece un borde de 5 píxeles de ancho y color negro */
+}
+
+body{
+    background-color: pink;
+}
+ul{
+    font-family: 'Comic Sans MS';
+    text-align: center;
+    color: hotpink;
+}
+#secondePage{
+    text-align: left;
+    color: hotpink;
+}
+
+#bebeCuernos{
+    
+}
