@@ -1,15 +1,15 @@
 // 1
-for (let i = 0; i < 90; i++) {
+/*for (let i = 0; i < 90; i++) {
 	console.log(i);
 };
-
+*/
 // 2
 let firstIndex = 0
 while (firstIndex < 90) {
 	firstIndex++
 	console.log(firstIndex)
 }
-
+/*
 // 3
 // la boucle for semble être plus apropriées
 
@@ -47,4 +47,4 @@ let fithtIndex = 49;
 do {
 	console.log(fithIndex);
 	fithtIndex--
-} while (fithIndex > 1);
+} while (fithIndex > 1);*/

@@ -1,0 +1,15 @@
+/*body {
+    background-color: black;
+}*/
+
+#options-container {
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#options-container.hidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+}
