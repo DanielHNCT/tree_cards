@@ -1,4 +1,37 @@
-const 
+const genUserReport = (nom, age, ville, profession, estAbonne) => {
+
+  let rapport = `Rapport utilisateur :\n`;
+  rapport += `Nom : ${nom}\n`;
+  rapport += `Age : ${nom} ans\n`;
+  rapport += `Ville: ${ville}\n`;
+  rapport += `Profession : ${profession}\n`;
+
+  if (estAbonne == true) {
+    rapport += `Statut : Abonné\n`;
+  } else {
+    rapport += `Statut : Abonnée\n`;
+  }
+
+  if (age < 18) {
+    rapport += `Catégorie : Jeune\n`;
+  } else if (age >= 18 && age < 60) {
+    rapport += `Catégorie : jeune\n`;
+  } else {
+    rapport += `Catégorie : Senior\n`;
+  }
+
+  return rapport;
+
+}
+
+
+
+
+
+
+
+
+
 
 function genererRapportUtilisateur(nom, age, ville, profession, estAbonne) {
     let rapport = "Rapport utilisateur :\n";
