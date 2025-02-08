@@ -4,10 +4,10 @@
 };
 */
 // 2
-let firstIndex = 0
-while (firstIndex < 90) {
-	firstIndex++
-	console.log(firstIndex)
+let i = 0
+while (i < 90) {
+	i++
+	console.log(i)
 }
 /*
 // 3

@@ -39,24 +39,19 @@ const fetchWeather = async () => {
                 console.log(`ERREUR API ${response}`);
             }
             const data = await response.json();
-            for (let element in data) {
+            console.log(data.current.temperature_2m)
+            /*for (let element in data) {
                 dataContainer.innerHTML += 
                 `
                     <p>${element.current.time}</>
                 `
-            }
+            }*/
         }
     } catch (error) {
         console.error(error)
     }
 }
 fetchWeather()
-
-
-
-
-
-
 
 
 const fetchWeatherTest = async (city) => {

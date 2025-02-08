@@ -6,11 +6,13 @@ const fetchGallery = async () => {
             console.log(`Erreur API ${response}`)
         }
         const data = await response.json();
+        
         data.slice(0, 50).forEach(item => {
             gallery.innerHTML +=
                 `
                     <div class='photo'>
-                    <img src=${item.thumbnailUrl} alt=${item.title}>
+                    <img src=${item.thumbnailUrl}>
+                    <img alt=${item.title}>
                     </div>
 
                     <div class='photo-title'>${item.title}</div>
