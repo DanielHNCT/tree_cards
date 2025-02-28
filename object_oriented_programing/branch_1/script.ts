@@ -1,20 +1,27 @@
-enum Category {
+const enum Category {
     FICTIONELLE = 'Fictionelle',
     DOCUMENTAIRE = 'Documentaire',
-    PSCHOLOGIQUE = 'Psychologique'
+    PSYCHOLOGIQUE = 'Psychologique'
 };
+
+// const Category = {
+//     FICTIONELLE: 'Fictionelle',
+//     DOCUMENTAIRE: 'Documentaire',
+//     PSYCHOLOGIQUE: 'Psychologique'
+//   } as const;
+  
+// type CategoryType = typeof Category[keyof typeof Category];
 
 class Film {
     constructor (
-        public title : string, 
-        public year : number, 
-        public realisator : string, 
+        public title: string, 
+        public year: number, 
+        public realisator: string, 
         public category: Category,
+        // public category: CategoryType,
+
         public age: number = 0){
-        this.title = title ;
-        this.year = year;
-        this.realisator = realisator;
-        this.category = category;
+        
     }
 
     showFilm(){
@@ -22,11 +29,11 @@ class Film {
     }
 }
 
-class Realisator{
+class Realisator {
     constructor(
-        public name : string, 
-        public fullname : string, 
-        public birthdate : number,
+        public name: string, 
+        public fullname: string, 
+        public birthdate: number,
         public age: number = 0){
         this.name = name;
         this.fullname = fullname;
@@ -38,15 +45,15 @@ class Realisator{
 
 class Client {
     constructor(
-        public name : string, 
-        public fullname : string,
-        public films : any[]
+        public name: string, 
+        public fullname: string,
+        public films: (Film | string)[]
     ){
         this.name = name;
         this.fullname = fullname;
         this.films = films;
     }
-    addMovie(film){
+    addMovie(film: Film){
         return this.films.push(film);
     }
 
@@ -55,7 +62,7 @@ class Client {
 
 const film1 = new Film ('Avatar', 2015, 'realisator1', Category.FICTIONELLE);
 const film2 = new Film ('Pulp Fiction', 2015, 'Quentin Tarantino', Category.FICTIONELLE);
-const film3 = new Film ('Orange Mecanique', 1972, 'Stanley Kubrick', Category.PSCHOLOGIQUE);
+const film3 = new Film ('Orange Mecanique', 1972, 'Stanley Kubrick', Category.PSYCHOLOGIQUE);
 const realisator = new Realisator('Quentin', 'Tarantino', 1963);
 const client1 = new Client ('Ange', 'Nono', [film1]);
 // client1.addMovie(film2.title)
