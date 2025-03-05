@@ -67,6 +67,7 @@ class Interceptor extends Spaceship {
         const ammu = 1000;
         for (let i = 0; i < ammu; i++) {
             this.fire();
+            this.fire();
             this.relaod();            
         }
     }
